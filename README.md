@@ -15,3 +15,11 @@ There is three screen including a splash screen. Login screen contains a email a
 
 
 
+### Instalation Guide
+
+1. Install **'Git'** on your system (recommended).
+2. Clone the project using **'Git Clone'** command or simply download the project as a Zip.
+3. Go to the desire project directory and install the node modules using ***npm i*** command (need to unzip first in case of zip file)
+4. Run the project using ***npx react-native run-android** , if you are on Linux OS then you need to run **npx react-native run-android && npm start**
+
+
