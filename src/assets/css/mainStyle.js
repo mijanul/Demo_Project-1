@@ -15,8 +15,8 @@ export const Colors = {
   lightGrey: '#dcdcdc',
   black: '#000000',
   errorRed: '#ff3333',
-  grey: "#b5b5b5",
-  themeBlue: "#24a0ed"
+  grey: '#b5b5b5',
+  themeBlue: '#24a0ed',
 };
 
 const commonStyle = StyleSheet.create({
@@ -32,7 +32,7 @@ const commonStyle = StyleSheet.create({
     fontSize: hp(2),
   },
   fs109: {
-    fontSize: hp(1.9)
+    fontSize: hp(1.9),
   },
   mt5: {
     marginTop: hp(5),
@@ -41,10 +41,10 @@ const commonStyle = StyleSheet.create({
     marginTop: hp(6),
   },
   fs4: {
-    fontSize: hp(4)
+    fontSize: hp(4),
   },
   fs3: {
-    fontSize: hp(3)
+    fontSize: hp(3),
   },
   mt10: {marginTop: hp(10)},
   mt2: {marginTop: hp(2)},
@@ -69,12 +69,12 @@ const commonStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: Colors.themeBlue,
-    borderRadius: hp(0.5)
+    borderRadius: hp(0.5),
   },
   btnTxt: {
     fontSize: hp(2.1),
     fontWeight: 'bold',
-    color: Colors.white
+    color: Colors.white,
   },
 
   cardview: {
@@ -90,7 +90,7 @@ const commonStyle = StyleSheet.create({
     width: '100%',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    marginVertical: hp(0.5)
+    marginVertical: hp(0.5),
   },
   itemImage: {
     height: hp(20),
@@ -104,7 +104,7 @@ const commonStyle = StyleSheet.create({
   },
   productHeading: {
     fontWeight: 'bold',
-    color: Colors.black
+    color: Colors.black,
   },
   descriptionText: {
     color: Colors.grey,
@@ -113,7 +113,7 @@ const commonStyle = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   price: {
     fontSize: hp(2.5),
@@ -122,12 +122,11 @@ const commonStyle = StyleSheet.create({
   },
   rating: {
     color: Colors.black,
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
   },
   skeltonView: {
-    height: hp(25)
-  }
-
+    height: hp(25),
+  },
 });
 
 export default commonStyle;

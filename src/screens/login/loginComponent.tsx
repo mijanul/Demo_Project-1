@@ -1,11 +1,10 @@
 import React from 'react';
 import {
-  View,
   Text,
   SafeAreaView,
   StatusBar,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import {Controller, useForm} from 'react-hook-form';
 
@@ -26,16 +25,15 @@ const LoginComponent = ({onSubmit}: LoginComponentProps) => {
 
   return (
     <>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={Colors.black}></StatusBar>
+      <StatusBar barStyle="light-content" backgroundColor={Colors.black} />
       <SafeAreaView style={commonStyle.container}>
         <Text style={[commonStyle.fs6, commonStyle.mt5]}>Login</Text>
         <Controller
           control={control}
           rules={{
             required: true,
-            pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+            // eslint-disable-next-line no-useless-escape
+            pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
           }}
           render={({field: {onChange, onBlur, value}}) => (
             <TextInput
@@ -49,7 +47,11 @@ const LoginComponent = ({onSubmit}: LoginComponentProps) => {
           )}
           name="email"
         />
-        {!!errors.email && <Text style={commonStyle.errorTxt}>Please enter a valid email id</Text>}
+        {!!errors.email && (
+          <Text style={commonStyle.errorTxt}>
+            Please enter a valid email id
+          </Text>
+        )}
 
         <Controller
           control={control}
@@ -69,10 +71,15 @@ const LoginComponent = ({onSubmit}: LoginComponentProps) => {
           name="password"
         />
 
-        {!!errors.password && <Text style={commonStyle.errorTxt}>Please enter your password</Text>}
+        {!!errors.password && (
+          <Text style={commonStyle.errorTxt}>Please enter your password</Text>
+        )}
 
-        <TouchableOpacity onPress={handleSubmit(onSubmit)} style={[commonStyle.btn, commonStyle.mt8]}>
-            <Text style={[commonStyle.btnTxt]}>LOGIN</Text>
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={handleSubmit(onSubmit)}
+          style={[commonStyle.btn, commonStyle.mt8]}>
+          <Text style={[commonStyle.btnTxt]}>LOGIN</Text>
         </TouchableOpacity>
       </SafeAreaView>
     </>

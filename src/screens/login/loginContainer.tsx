@@ -6,7 +6,6 @@ import {LoginPayload} from '../../models/authModels';
 import {navigate} from '../../utils/rootNavigations';
 
 const LoginContainer = () => {
-  
   const onSubmit: (payload: LoginPayload) => void = async (
     payload: LoginPayload,
   ) => {
@@ -14,11 +13,9 @@ const LoginContainer = () => {
     navigate('Home');
   };
 
-  return <LoginComponent onSubmit={onSubmit}></LoginComponent>;
+  return <LoginComponent onSubmit={onSubmit} />;
 };
 
-interface LoginContainerProps {
-
-}
+interface LoginContainerProps {}
 
 export default LoginContainer;

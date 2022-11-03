@@ -1,5 +1,4 @@
 import axios, {AxiosInstance, AxiosRequestConfig} from 'axios';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import Config from 'react-native-config';
 
 export default class ServiceClient {
@@ -8,10 +7,11 @@ export default class ServiceClient {
     this.client = axios.create(config);
 
     this.client.interceptors.request.use(
+      // eslint-disable-next-line no-shadow
       async config => {
         axios
           .get(Config.API_BASE_URL)
-          .then(response => {})
+          .then(_response => {})
           .catch(error => {
             console.error(error);
           });

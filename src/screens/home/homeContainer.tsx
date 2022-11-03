@@ -3,13 +3,12 @@ import {BackHandler} from 'react-native';
 
 import HomeComponent from './homeComponent';
 import {ProductList} from '../../models/productModels';
-import {getProductList} from '../../services/productService'
+import {getProductList} from '../../services/productService';
 
 const HomeContainer = () => {
   const [exitApp, setExitApp] = useState<number>(0);
-  const [productList, setProductList] = useState<ProductList[]>([
-  ]);
-  const [loader, setLoader] = useState<boolean>(true)
+  const [productList, setProductList] = useState<ProductList[]>([]);
+  const [loader, setLoader] = useState<boolean>(true);
 
   let timeCount: ReturnType<typeof setTimeout>;
 
@@ -25,8 +24,8 @@ const HomeContainer = () => {
   });
 
   useEffect(() => {
-    productListing()
-  }, [])
+    productListing();
+  }, []);
 
   const backAction = () => {
     timeCount = setTimeout(() => {
@@ -43,16 +42,15 @@ const HomeContainer = () => {
 
   const productListing = async () => {
     try {
-      const response = await getProductList()
-      setProductList(response.data)
-      setLoader(false)
+      const response = await getProductList();
+      setProductList(response.data);
+      setLoader(false);
+    } catch (error: any) {
+      console.log(error);
     }
-    catch (error: any) {
-      console.log(error)
-    }
-  }
+  };
 
-  return <HomeComponent list={productList} loader={loader}></HomeComponent>;
+  return <HomeComponent list={productList} loader={loader} />;
 };
 
 export default HomeContainer;
