@@ -33,7 +33,7 @@ const LoginComponent = ({onSubmit}: LoginComponentProps) => {
           rules={{
             required: true,
             // eslint-disable-next-line no-useless-escape
-            pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+            pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, //email validation regex
           }}
           render={({field: {onChange, onBlur, value}}) => (
             <TextInput

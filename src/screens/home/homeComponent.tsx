@@ -20,9 +20,13 @@ const HomeComponent = ({list, loader}: HomeComponentProps) => {
             </Text>
           </View>
         </View>
-        <View style={[commonStyle.rowView, commonStyle.mt2]}>
+        <View style={[commonStyle.rowView, commonStyle.mt1]}>
           <Text style={[commonStyle.fs2, commonStyle.rating]}>
-            Rating : {item.rating.rate} ({item.rating.count})
+            Rating :{' '}
+            <Text style={commonStyle.goldRating}>
+              {item.rating.rate.toFixed(1)}
+            </Text>{' '}
+            ({item.rating.count})
           </Text>
           <Text style={commonStyle.price}>${item.price}</Text>
         </View>

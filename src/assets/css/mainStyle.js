@@ -17,6 +17,7 @@ export const Colors = {
   errorRed: '#ff3333',
   grey: '#b5b5b5',
   themeBlue: '#24a0ed',
+  gold: '#DAA520',
 };
 
 const commonStyle = StyleSheet.create({
@@ -48,6 +49,7 @@ const commonStyle = StyleSheet.create({
   },
   mt10: {marginTop: hp(10)},
   mt2: {marginTop: hp(2)},
+  mt1: {marginTop: hp(1)},
   textInput: {
     width: wp(90),
     height: hp(7),
@@ -85,12 +87,13 @@ const commonStyle = StyleSheet.create({
     marginBottom: hp(2),
     padding: wp(5),
     justifyContent: 'space-between',
+    elevation: 3,
   },
   innerCardView: {
     width: '100%',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    marginVertical: hp(0.5),
+    marginVertical: hp(0.3),
   },
   itemImage: {
     height: hp(20),
@@ -100,7 +103,7 @@ const commonStyle = StyleSheet.create({
   descriptionView: {
     minHeight: hp(15),
     width: wp(58),
-    padding: wp(5),
+    padding: wp(2.5),
   },
   productHeading: {
     fontWeight: 'bold',
@@ -124,6 +127,7 @@ const commonStyle = StyleSheet.create({
     color: Colors.black,
     alignSelf: 'flex-end',
   },
+  goldRating: {color: Colors.gold, fontWeight: '700'},
   skeltonView: {
     height: hp(25),
   },
