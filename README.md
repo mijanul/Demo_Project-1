@@ -23,7 +23,7 @@ There is three screen including a splash screen. Login screen contains a email a
 4. Run the project using ***npx react-native run-android** , if you are on Linux OS then you need to run **npx react-native run-android && npm start**.
 
 
-### Challenges
+## Challenges
 
 One can take as much challenge as you can by modifying the code or he/she create the entire project by their by taking help with this project. Here is a list of some quick challenges - 
 
