@@ -8,13 +8,19 @@ There is three screen including a splash screen. Login screen contains a email a
 
 ###### Dummy API - https://fakestoreapi.com/products
 
-<img src="Readme-source/0.jpg" width="220"/>                  
-<img src="Readme-source/1.jpg" width="220" /> <img src="Readme-source/2.jpg" width="220" />    
-<img src="Readme-source/3.gif" width="220" /> <img src="Readme-source/4.jpg" width="220" />
+<img src="Readme-source/0.jpg" width="220"/>
 
 
 
-### Instalation Guide
+<img src="Readme-source/1.jpg" width="220" />          <img src="Readme-source/2.jpg" width="220" />    
+
+
+
+<img src="Readme-source/3.gif" width="220" />      <img src="Readme-source/4.jpg" width="220" />
+
+
+
+## Instalation Guide
 
 1. Install **'Git'** on your system (recommended).
 2. Clone the project using **'Git Clone'** command or simply download the project as a Zip.
