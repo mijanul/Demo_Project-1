@@ -10,9 +10,9 @@ const App = () => {
   LogBox.ignoreAllLogs();
   return (
     <SafeAreaProvider>
-        <NavigationContainer ref={navigationRef}>
-          <RootNavigationStack />
-        </NavigationContainer>
+      <NavigationContainer ref={navigationRef}>
+        <RootNavigationStack />
+      </NavigationContainer>
     </SafeAreaProvider>
   );
 };

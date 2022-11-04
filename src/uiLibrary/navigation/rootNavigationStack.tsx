@@ -20,19 +20,22 @@ const RootNavigationStack = () => {
     async function getLoginStatus() {
       let loginCred = await AsyncStorage.getItem('Login_cred');
       try {
-        if (!!loginCred) setInitialRoute('Home');
-        else setInitialRoute('Login');
+        if (loginCred) {
+          setInitialRoute('Home');
+        } else {
+          setInitialRoute('Login');
+        }
       } catch {
         setInitialRoute('Login');
       }
       SplashScreen.hide();
     }
     getLoginStatus();
-   
   }, []);
-  return !!initialRoute && (
+  return (
+    // !!initialRoute && (
     <Stack.Navigator
-      initialRouteName={initialRoute as "Login" | "Home"}
+      initialRouteName={initialRoute as 'Login' | 'Home'}
       screenOptions={{
         animation: 'slide_from_right',
         animationTypeForReplace: 'push',
@@ -43,6 +46,7 @@ const RootNavigationStack = () => {
       <Stack.Screen name="Login" component={LoginContainer} />
       <Stack.Screen name="Home" component={HomeContainer} />
     </Stack.Navigator>
+    // )
   );
 };
 
